@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		6A2F2E142727A86F00DB7402 /* WordTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F2E132727A86F00DB7402 /* WordTVC.swift */; };
+		6A2F2E162727A89000DB7402 /* EditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F2E152727A89000DB7402 /* EditVC.swift */; };
+		6A2F2E182727ABDB00DB7402 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F2E172727ABDB00DB7402 /* WordCell.swift */; };
 		6A36AB8227274465000D150B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36AB8127274465000D150B /* AppDelegate.swift */; };
 		6A36AB8427274465000D150B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36AB8327274465000D150B /* SceneDelegate.swift */; };
 		6A36AB8627274465000D150B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36AB8527274465000D150B /* ViewController.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		6A2F2E132727A86F00DB7402 /* WordTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordTVC.swift; sourceTree = "<group>"; };
+		6A2F2E152727A89000DB7402 /* EditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditVC.swift; sourceTree = "<group>"; };
+		6A2F2E172727ABDB00DB7402 /* WordCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordCell.swift; sourceTree = "<group>"; };
 		6A36AB7E27274465000D150B /* Word.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Word.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A36AB8127274465000D150B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A36AB8327274465000D150B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +72,9 @@
 				6A36AB8F27274468000D150B /* LaunchScreen.storyboard */,
 				6A36AB9227274468000D150B /* Info.plist */,
 				6A36AB8A27274465000D150B /* Word.xcdatamodeld */,
+				6A2F2E132727A86F00DB7402 /* WordTVC.swift */,
+				6A2F2E152727A89000DB7402 /* EditVC.swift */,
+				6A2F2E172727ABDB00DB7402 /* WordCell.swift */,
 			);
 			path = Word;
 			sourceTree = "<group>";
@@ -141,8 +150,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				6A36AB8627274465000D150B /* ViewController.swift in Sources */,
+				6A2F2E142727A86F00DB7402 /* WordTVC.swift in Sources */,
+				6A2F2E182727ABDB00DB7402 /* WordCell.swift in Sources */,
 				6A36AB8C27274465000D150B /* Word.xcdatamodeld in Sources */,
 				6A36AB8227274465000D150B /* AppDelegate.swift in Sources */,
+				6A2F2E162727A89000DB7402 /* EditVC.swift in Sources */,
 				6A36AB8427274465000D150B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

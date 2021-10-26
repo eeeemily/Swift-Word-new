@@ -8,16 +8,16 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Table View Controller-->
+        <!--WordTVC-->
         <scene sceneID="rhj-hO-h9i">
             <objects>
-                <tableViewController id="Zof-DK-F2d" sceneMemberID="viewController">
+                <tableViewController id="Zof-DK-F2d" customClass="WordTVC" customModule="Word" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="100" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="iiZ-aM-nlx">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="IE0-IR-XMJ" detailTextLabel="vBw-fy-xp6" imageView="cJ5-lR-HaS" style="IBUITableViewCellStyleSubtitle" id="03O-ci-oNk">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="IE0-IR-XMJ" detailTextLabel="vBw-fy-xp6" imageView="cJ5-lR-HaS" style="IBUITableViewCellStyleSubtitle" id="03O-ci-oNk" customClass="WordCell" customModule="Word">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="15" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="03O-ci-oNk" id="QeO-9B-LiM">
@@ -44,6 +44,10 @@
                                         </imageView>
                                     </subviews>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="passwordLabel" destination="vBw-fy-xp6" id="Qnm-Nd-Hs4"/>
+                                    <outlet property="titleLabel" destination="IE0-IR-XMJ" id="dHX-Uz-rgV"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -59,10 +63,10 @@
             </objects>
             <point key="canvasLocation" x="897" y="88"/>
         </scene>
-        <!--View Controller-->
+        <!--EditVC-->
         <scene sceneID="LTy-Fr-tyg">
             <objects>
-                <viewController id="9Jd-G0-Exz" sceneMemberID="viewController">
+                <viewController id="9Jd-G0-Exz" customClass="EditVC" customModule="Word" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKV-Nl-Lke">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -88,6 +92,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="9Jd-G0-Exz" eventType="touchUpInside" id="pvO-Du-2t8"/>
+                                </connections>
                             </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-eN-Fwz">
                                 <rect key="frame" x="99" y="487" width="222.5" height="34"/>
@@ -110,6 +117,9 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="onAdd:" destination="9Jd-G0-Exz" eventType="touchUpInside" id="k4s-r0-vgX"/>
+                                </connections>
                             </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="xXS-eR-8YQ"/>
@@ -121,6 +131,10 @@
                             <constraint firstItem="EMj-eN-Fwz" firstAttribute="centerX" secondItem="xXS-eR-8YQ" secondAttribute="centerX" id="c59-it-xIC"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="passwordTextfield" destination="Xrv-fr-u3j" id="xa4-uk-D7z"/>
+                        <outlet property="titleField" destination="6po-IM-asE" id="Fpj-hD-KN5"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="fT0-48-64v" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

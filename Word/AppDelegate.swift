@@ -76,6 +76,18 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
     }
+    
+    // MARK: - Conveniences
+    
+    static var persistentContainer: NSPersistentContainer {
+        return (UIApplication.shared.delegate as! AppDelegate).persistentContainer
+    }
+    
+    static var cdContext: NSManagedObjectContext {
+        let cdContext = persistentContainer.viewContext
+        cdContext.automaticallyMergesChangesFromParent = true
+        return cdContext
+    }
 
 }
 
