@@ -9,9 +9,8 @@ import UIKit
 import CoreData
 
 class EditVC: UIViewController {
-
-    @IBOutlet weak var titleField: UITextField!
-    @IBOutlet weak var passwordTextfield: UITextField!
+    @IBOutlet weak var titleTextField: UITextField!
+   @IBOutlet weak var passwordTextfield: UITextField!
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -21,7 +20,7 @@ class EditVC: UIViewController {
     
     func saveItem(title: String, password: String) {
         let context = AppDelegate.cdContext
-        if let entity = NSEntityDescription.entity(forEntityName: "Item", in: context) {
+        if let entity = NSEntityDescription.entity(forEntityName: "Entry", in: context) {
             let entry = NSManagedObject(entity: entity, insertInto: context)
             entry.setValue(title, forKeyPath: "title")
             entry.setValue(password, forKeyPath: "password")
@@ -34,12 +33,15 @@ class EditVC: UIViewController {
             }
         }
     }
-    @IBAction func onCancel(_ sender: Any) {
+    @IBAction func onCancel2(_ sender: Any) {
         presentingViewController?.dismiss(animated: true)
+
+    }
+    
+    @IBAction func onAdd2(_ sender: Any) {
+        presentingViewController?.dismiss(animated: true)
+
     }
 
-    @IBAction func onAdd(_ sender: Any) {
-        presentingViewController?.dismiss(animated: true)
-    }
 }
 

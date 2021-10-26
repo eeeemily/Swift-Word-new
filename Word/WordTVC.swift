@@ -10,6 +10,12 @@ import CoreData
 
 class WordTVC: UITableViewController {
     var word: [NSManagedObject] = []
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
+        readData()
+    }
     
     func deletionAlert(title: String, completion: @escaping (UIAlertAction) -> Void) {
         let alertMsg = "Are you sure you want to delete \(title)?"
@@ -45,6 +51,7 @@ class WordTVC: UITableViewController {
         
         if let entry = word[indexPath.row] as? Entry {
             cell.update(with: entry)
+            
         }
         
         return cell
@@ -63,10 +70,12 @@ class WordTVC: UITableViewController {
     // MARK: - CoreData
     
     func readData() {
+
         let context = AppDelegate.cdContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Entry")
         do {
             word = try context.fetch(fetchRequest)
+
         } catch let error as NSError {
             print("Could not fetch requested entry. \(error), \(error.userInfo)")
         }
