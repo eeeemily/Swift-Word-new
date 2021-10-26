@@ -12,7 +12,6 @@
 		6A2F2E182727ABDB00DB7402 /* WordCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A2F2E172727ABDB00DB7402 /* WordCell.swift */; };
 		6A36AB8227274465000D150B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36AB8127274465000D150B /* AppDelegate.swift */; };
 		6A36AB8427274465000D150B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36AB8327274465000D150B /* SceneDelegate.swift */; };
-		6A36AB8627274465000D150B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6A36AB8527274465000D150B /* ViewController.swift */; };
 		6A36AB8927274465000D150B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6A36AB8727274465000D150B /* Main.storyboard */; };
 		6A36AB8C27274465000D150B /* Word.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 6A36AB8A27274465000D150B /* Word.xcdatamodeld */; };
 		6A36AB8E27274468000D150B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 6A36AB8D27274468000D150B /* Assets.xcassets */; };
@@ -26,7 +25,6 @@
 		6A36AB7E27274465000D150B /* Word.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Word.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		6A36AB8127274465000D150B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		6A36AB8327274465000D150B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		6A36AB8527274465000D150B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		6A36AB8827274465000D150B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		6A36AB8B27274465000D150B /* Word.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Word.xcdatamodel; sourceTree = "<group>"; };
 		6A36AB8D27274468000D150B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -66,7 +64,6 @@
 			children = (
 				6A36AB8127274465000D150B /* AppDelegate.swift */,
 				6A36AB8327274465000D150B /* SceneDelegate.swift */,
-				6A36AB8527274465000D150B /* ViewController.swift */,
 				6A36AB8727274465000D150B /* Main.storyboard */,
 				6A36AB8D27274468000D150B /* Assets.xcassets */,
 				6A36AB8F27274468000D150B /* LaunchScreen.storyboard */,
@@ -149,7 +146,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6A36AB8627274465000D150B /* ViewController.swift in Sources */,
 				6A2F2E142727A86F00DB7402 /* WordTVC.swift in Sources */,
 				6A2F2E182727ABDB00DB7402 /* WordCell.swift in Sources */,
 				6A36AB8C27274465000D150B /* Word.xcdatamodeld in Sources */,

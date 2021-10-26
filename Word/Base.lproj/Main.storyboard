@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--WordTVC-->
+        <!--Word-->
         <scene sceneID="rhj-hO-h9i">
             <objects>
                 <tableViewController id="Zof-DK-F2d" customClass="WordTVC" customModule="Word" customModuleProvider="target" sceneMemberID="viewController">
@@ -55,8 +55,12 @@
                             <outlet property="delegate" destination="Zof-DK-F2d" id="qiO-47-8Zk"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="bux-On-Jwm">
-                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="We3-Pf-gao"/>
+                    <navigationItem key="navigationItem" title="Word" id="bux-On-Jwm">
+                        <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="We3-Pf-gao">
+                            <connections>
+                                <segue destination="9Jd-G0-Exz" kind="presentation" id="za1-7n-PCL"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hoT-se-QBx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -68,11 +72,11 @@
             <objects>
                 <viewController id="9Jd-G0-Exz" customClass="EditVC" customModule="Word" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="hKV-Nl-Lke">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="842"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="33" translatesAutoresizingMaskIntoConstraints="NO" id="x5d-yg-Lmy">
-                                <rect key="frame" x="110" y="372" width="173" height="34"/>
+                                <rect key="frame" x="115" y="67" width="173" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mIg-a9-Ex3">
                                         <rect key="frame" x="0.0" y="0.0" width="33" height="34"/>
@@ -87,17 +91,8 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70f-IO-dvV">
-                                <rect key="frame" x="91" y="640" width="73" height="41"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
-                                <state key="normal" title="Cancel"/>
-                                <connections>
-                                    <action selector="onCancel:" destination="9Jd-G0-Exz" eventType="touchUpInside" id="pvO-Du-2t8"/>
-                                </connections>
-                            </button>
                             <stackView opaque="NO" contentMode="scaleToFill" misplaced="YES" spacing="38" translatesAutoresizingMaskIntoConstraints="NO" id="EMj-eN-Fwz">
-                                <rect key="frame" x="99" y="487" width="222.5" height="34"/>
+                                <rect key="frame" x="96" y="159" width="222.5" height="34"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Password" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o6U-d5-7Xz">
                                         <rect key="frame" x="0.0" y="0.0" width="73.5" height="34"/>
@@ -113,12 +108,21 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xje-7c-akl">
-                                <rect key="frame" x="270" y="640" width="51" height="41"/>
+                                <rect key="frame" x="265" y="229" width="51" height="41"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="24"/>
                                 <state key="normal" title="Save"/>
                                 <connections>
                                     <action selector="onAdd:" destination="9Jd-G0-Exz" eventType="touchUpInside" id="k4s-r0-vgX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="70f-IO-dvV">
+                                <rect key="frame" x="86" y="229" width="73" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="24"/>
+                                <state key="normal" title="Cancel"/>
+                                <connections>
+                                    <action selector="onCancel:" destination="9Jd-G0-Exz" eventType="touchUpInside" id="pvO-Du-2t8"/>
                                 </connections>
                             </button>
                         </subviews>
