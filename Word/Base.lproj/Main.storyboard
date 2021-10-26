@@ -17,7 +17,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" textLabel="IE0-IR-XMJ" detailTextLabel="vBw-fy-xp6" imageView="cJ5-lR-HaS" style="IBUITableViewCellStyleSubtitle" id="03O-ci-oNk" customClass="WordCell" customModule="Word">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="WordCell" textLabel="IE0-IR-XMJ" detailTextLabel="vBw-fy-xp6" imageView="cJ5-lR-HaS" style="IBUITableViewCellStyleSubtitle" id="03O-ci-oNk" customClass="WordCell">
                                 <rect key="frame" x="0.0" y="24.5" width="414" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" tag="15" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="03O-ci-oNk" id="QeO-9B-LiM">
