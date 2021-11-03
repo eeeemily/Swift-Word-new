@@ -39,6 +39,9 @@ class EditVC: UIViewController {
     }
     
     @IBAction func onAdd2(_ sender: Any) {
+        if let title = titleTextField?.text, let password = passwordTextfield?.text {
+            saveItem(title: title, password: password)
+        }
         presentingViewController?.dismiss(animated: true)
 
     }

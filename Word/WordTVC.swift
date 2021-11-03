@@ -12,7 +12,6 @@ class WordTVC: UITableViewController {
     var word: [NSManagedObject] = []
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.title = Bundle.main.object(forInfoDictionaryKey: "CFBundleName") as? String
         readData()
     }
@@ -70,7 +69,6 @@ class WordTVC: UITableViewController {
     // MARK: - CoreData
     
     func readData() {
-
         let context = AppDelegate.cdContext
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Entry")
         do {
