@@ -99,4 +99,7 @@ class WordTVC: UITableViewController {
         tableView.reloadData()
     }
     
+    @IBAction func onEditButton(_ sender: UIBarButtonItem) {
+        setEditing(!isEditing, animated: true)
+    }
 }

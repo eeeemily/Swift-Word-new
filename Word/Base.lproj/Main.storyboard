@@ -57,6 +57,11 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="Word" id="bux-On-Jwm">
+                        <barButtonItem key="leftBarButtonItem" title="Edit" id="37l-sT-HZn">
+                            <connections>
+                                <action selector="onEditButton:" destination="Zof-DK-F2d" id="vMe-KY-Tto"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Item" systemItem="add" id="We3-Pf-gao">
                             <connections>
                                 <segue destination="9Jd-G0-Exz" kind="presentation" id="za1-7n-PCL"/>
