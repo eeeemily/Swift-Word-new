@@ -53,17 +53,17 @@ class Password{
     func getColor(strenth: Int)-> UIColor{
         switch strenth {
         case 5:
-            return UIColor.green //UIColor(red: 1, green: 165/255, blue: 0, alpha: 1)
+            return UIColor(red: 56/255.0, green: 124/255.0, blue: 68/255.0, alpha: 1)
         case 4:
-            return UIColor.red
+            return UIColor(red: 133/255.0, green: 187/255.0, blue: 101/255.0, alpha: 1)
         case 3:
-            return UIColor.purple
+            return UIColor(red: 154/255.0, green: 202/255.0, blue: 60/255.0, alpha: 1)
         case 2:
-            return UIColor.orange
+            return UIColor(red: 250/255.0, green: 128/255.0, blue: 114/255.0, alpha: 1)
         case 1:
-            return UIColor.blue
+            return UIColor(red: 237/255.0, green: 41/255.0, blue: 57/255.0, alpha: 1)
         default:
-            return UIColor.black //should never happen!
+            return UIColor.black //should never happen with data added after using model 2
         }
         
     }
