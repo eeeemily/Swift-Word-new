@@ -11,6 +11,7 @@ import CoreData
 class EditVC: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
    @IBOutlet weak var passwordTextfield: UITextField!
+    let pword = Password()
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -24,7 +25,7 @@ class EditVC: UIViewController {
             let entry = NSManagedObject(entity: entity, insertInto: context)
             entry.setValue(title, forKeyPath: "title")
             entry.setValue(password, forKeyPath: "password")
-            
+            entry.setValue(pword.testPwd(pwd: password), forKey: "strength")
             
             do {
                 try context.save()

@@ -366,7 +366,7 @@
 				6A19EC41273B64D2006D4DEA /* Word 2.xcdatamodel */,
 				6A36AB8B27274465000D150B /* Word.xcdatamodel */,
 			);
-			currentVersion = 6A36AB8B27274465000D150B /* Word.xcdatamodel */;
+			currentVersion = 6A19EC41273B64D2006D4DEA /* Word 2.xcdatamodel */;
 			path = Word.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

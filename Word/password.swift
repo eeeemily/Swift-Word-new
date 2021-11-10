@@ -25,22 +25,12 @@ class Password{
     }
     //in the scale of 1-5: Very Weak -> Weak -> Reasonable -> Strong -> very Strong
     func testPwd(pwd: String)-> Int{
-//        //has at least 8 digit; contains lower, upper, number and special character
-//        let veryStrong = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[A-Z])(?=.*[0-9])(?=.*[$@$#!%*?&]).{8,}$")
-//        //strong: does have
-//        let strong = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$")
-//        //reasonable: at least 8 digit;
-//        let reasonable = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z])(?=.*[$@$#!%*?&])(?=.*[A-Z]).{6,}$")
-//        //weak: at least 6 digit; has all lower case or upper case
-//        let weak = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z]).{6,}$")
-//        let weak2 = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[A-Z]).{6,}$")
         var strength = 0
-        let containLowerCase = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z]).{5,}$")
-        let containUpperCase = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z]).{5,}$")
-        let containNumber = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z]).{5,}$")
-        let containSpecialChar = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z]).{5,}$")
+        let containLowerCase = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[a-z]).{4,}$")
+        let containUpperCase = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[A-Z]).{4,}$")
+        let containNumber = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[0-9]).{4,}$")
+        let containSpecialChar = NSPredicate(format: "SELF MATCHES %@ ", "^(?=.*[$@$#!%*?&]).{4,}$")
         let hasEightDigit = NSPredicate(format: "SELF MATCHES %@ ", "^.{8,}$")
-        
         
         if(containLowerCase.evaluate(with: pwd)){
             strength+=1
@@ -57,8 +47,24 @@ class Password{
         if(hasEightDigit.evaluate(with: pwd)){
             strength+=1
         }
-        
-        
         return strength
+    }
+    
+    func getColor(strenth: Int)-> UIColor{
+        switch strenth {
+        case 5:
+            return UIColor.green //UIColor(red: 1, green: 165/255, blue: 0, alpha: 1)
+        case 4:
+            return UIColor.red
+        case 3:
+            return UIColor.purple
+        case 2:
+            return UIColor.orange
+        case 1:
+            return UIColor.blue
+        default:
+            return UIColor.black //should never happen!
+        }
+        
     }
 }
